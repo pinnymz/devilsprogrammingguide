@@ -1,0 +1,3294 @@
+<!DOCTYPE html>
+<!--<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=83e88e0d61213141a74383bf5d31425e"></script>-->
+<!--<!DOCTYPE html>-->
+
+<!--                                                                                                 
+
+Observer Theme
+By Zack Sultan
+Released January 2013
+Revised April 16, 2014
+                
+-->
+
+<html>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+        <title>The Devil's Programming Guide</title>
+        <style type="text/css">figure {margin: 0;}</style>
+<link rel="shortcut icon" href="assets/avatar_5833ca04bb38_128.png">
+        <link rel="alternate" type="application/rss+xml" href="http://devilsprogrammingguide.tumblr.com/rss">
+
+        <link rel="shortcut icon" href="assets/avatar_5833ca04bb38_128.png">
+        <link rel="alternate" type="application/rss+xml" href="http://devilsprogrammingguide.tumblr.com/rss">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no" />
+
+
+
+<!-- Options -->
+
+
+        <meta name="if:Show Navigation" content="1"/>
+        <meta name="if:Alternate Header Layout" content="0"/>
+        <meta name="if:Show Description" content="0"/>
+        <meta name="if:Show Archive Navigation Link" content="1"/>
+        <meta name="if:Wide Images" content="1"/>
+        <meta name="if:Photoset Layout" content="0"/>
+        <meta name="if:Show Post Tags" content="1"/>
+        <meta name="if:Show Post Notes" content="1"/>
+        <meta name="if:Show Copyright" content="0"/>
+        <meta name="if:Infinite Scroll" content="1"/>
+
+        <meta name="Title font" content="Gibson">
+        <meta name="Title font weight" content="bold" title="Bold">
+        <meta name="Title font weight" content="normal" title="Normal">
+        <meta name="font:Body font" content="Calluna"/>
+
+        <meta name="Background color" content="#fff">
+        <meta name="Title color" content="#444444">
+        <meta name="Link color" content="#5f79a4">
+
+        <meta name="color:Body text" content="#333333"/>
+		<meta name="color:Secondary text" content="#888888"/>
+        <meta name="image:Logo" content=""/>
+        <meta name="text:TypeKit ID" content=""/>
+        <meta name="text:Title Font" content=""/>
+        <meta name="text:Body Font" content=""/>
+        <meta name="text:Post Headline Font" content=""/>
+        <!--<meta name="text:Secondary Font" content=""/>-->
+
+        <meta name='text:Disqus Shortname' content='' />
+        <meta name='text:Google Analytics' content='' />
+
+<!-- Scripts -->
+
+    <script src="assets/jquery-1.9.1.min.js"></script>
+
+
+    <!-- Infinite Scroll -->
+    <script type="text/javascript" src="assets/infinitescrolling.js" ></script>
+
+
+
+
+    <!-- Media resizing -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Make desktop tumblr video stretch to 100%
+            $('.tumblr_video_container').css({ 'width' : '100%', 'height' : '100%' });
+            // Resize tumblr video on mobile
+            $('.iphone-video a').css({ 'width' : '100%', 'height' : '200px' });
+		});
+
+        //Make Spotify the right size and responsive
+	    $(document).ready(function(){
+	        $('.mobile-spotify iframe').css('height', '80px');
+            $('.mobile-spotify iframe').css('width', '290px');
+            $('iframe[src*="embed.spotify.com"]').each( function() {
+                $(this).css('width',$(this).parent(1).css('width'));
+                $(this).css('height', '82');
+                $(this).attr('src',$(this).attr('src'));
+            });
+        });
+        $(window).resize(function() {
+            $('iframe[src*="embed.spotify.com"]').each( function() {
+                $(this).css('width',$(this).parent(1).css('width'));
+                $(this).css('height', '82');
+                $(this).attr('src',$(this).attr('src'));
+            });
+        });
+
+        //disable safari active states
+        document.addEventListener("touchstart", function() {},false);
+
+	</script>
+
+
+
+
+<!-- Style Sheet -->
+
+<style type="text/css">
+
+.regular p {
+	font-weight: bold;
+	color:aqua;
+}
+
+.regular .bottom-nav {
+	display: none;
+}
+
+::selection {
+    background: #ad1f2d; /* Safari */
+	color: #333333;
+	}
+
+::-moz-selection {
+	background: #ad1f2d; /* Firefox */
+	color: #333333;
+}
+
+body {
+	margin: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+    font-size:18px;
+	-webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+p, li, blockquote {
+	line-height: 28px;
+	margin: 0;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.ir {
+	text-indent: -99999em;
+}
+
+.center {
+	text-align: center;
+}
+
+/* Global colors
+********************************/
+
+body {
+	color: #333333;
+	background-color: #FAFAFA;
+}
+
+.blog-description {
+	color: #888888;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+#header h1 a {
+	color: #444444;
+	border-bottom: none;
+}
+
+a:hover {
+}
+
+a:active {
+	position: relative;
+	outline: none;
+	top: 1px;
+}
+
+
+.metadata a, #footer-links a, #footer p.promo a, .links a {
+	color: #888888;
+	border-bottom: none;
+}
+
+.metadata a:hover, #footer-links a:hover, #footer p.promo a:hover, .links a:hover, .more a:hover, a.mobile-player:hover {
+
+}
+
+.post {
+	border-bottom: 1px solid rgba(136, 136, 136, 0.2);
+}
+
+.colophon p {
+	color: #888888;
+}
+
+
+/* Global fonts
+********************************/
+
+body {
+	font-family:  'Calluna', serif, georgia, serif;
+	font-weight: normal;
+}
+
+.title h1, .link-title h1, .chat-title h1, .q h1, .a h1, .album-info h2, #footer h2 {
+	font-family:  'Gibson', sans-serif, georgia, serif;
+	font-weight: bold;
+}
+
+.blog-title h1 {
+	font-family:  'Gibson', sans-serif, futura, helvetica, arial, sans-serif;
+	font-weight: bold;
+	font-size: 96px;
+	line-height: 1em;
+}
+
+.metadata a {
+	font-family:  , helvetica, arial, sans-serif;
+	font-weight: normal;
+}
+
+
+/* Page
+********************************/
+
+
+#page {
+	border: 0px solid;
+	max-width: 900px;
+	padding-left:  50px;
+	padding-right: 50px;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+/* Header Centered
+********************************/
+
+#header {
+	margin-top: 20px;
+	margin-bottom: 80px;
+	display: block;
+	overflow: visible;
+}
+
+#header a {
+	text-decoration: none;
+}
+
+.blog-title {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 70px;
+}
+
+.blog-title a {
+	border-bottom: none;
+}
+
+.blog-title img {
+	max-width: 100%;
+}
+
+.blog-description {
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 20px;
+}
+
+.links {
+	margin-top: 0px;
+	text-align: center;
+	float: none;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.2);
+}
+
+.links ul {
+	margin-top: 10px;
+	padding: 0;
+	display: block;
+	text-align: center;
+	float: none;
+}
+
+.links li {
+	display: inline;
+	margin-left: 10px;
+	text-transform: none;
+}
+
+.links li:first-child {
+	margin-left: 0px;
+}
+
+
+
+/* Post wrappers
+********************************/
+
+#content {
+	width: 100%;
+	overflow-x: hidden;
+	clear: both;
+}
+
+.post {
+	margin-bottom: 45px;
+	padding-bottom: 40px;
+	width: 100%;
+}
+
+.narrow {
+	max-width: 640px;
+	margin: auto;
+}
+
+
+/* Headings
+********************************/
+
+.title h1, .link-title h1, .chat-title h1 {
+	text-align: center;
+	margin: auto;
+	margin-bottom: 25px;
+	font-size: 42px;
+	line-height: 50px;
+}
+
+.link-title a {
+	text-decoration: none;
+	position: relative;
+	border: none;
+	color: #ad1f2d;
+}
+
+span.link-arrow {
+	position: relative;
+	font-size: 20px;
+	bottom: 3px;
+}
+
+.quote-short {
+	font-size: 24px;
+	line-height: 36px;
+	margin-bottom: 25px;
+}
+
+.photo img, .album-art img, .videoWrapper {
+    max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	border-radius: 2px;
+}
+
+.photo img, .album-art img {
+	min-width: 640px;
+}
+
+.photoset-layout {
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.tumblr_audio_player {
+	height: 250px;
+}
+
+.audio iframe {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe, .videoWrapper object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/* Post body styles
+********************************/
+
+.caption p {
+	margin-bottom: 15px;
+}
+
+.caption h1 {
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.caption h2 {
+	font-weight: bold;
+	margin-bottom: 15px;
+	font-size: 24px;
+}
+
+.caption blockquote {
+	margin-bottom: 10px;
+	border-left: 3px solid rgba(136, 136, 136, 0.2);
+	margin-left: 5px;
+	padding-left: 15px;
+	line-height: 26px;
+}
+
+.caption pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	background-color: rgba(136, 136, 136, 0.2);
+	border-radius: 2px;
+	padding: 10px 15px 10px 15px;
+	font-size: 15px;
+	line-height: 24px;
+	margin: 15px 0 25px 0;
+}
+
+.caption ul, ol {
+	margin-top: 0;
+	margin-bottom: 25px;
+	padding-left: 40px;
+}
+
+.caption img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto 30px auto;
+    border-radius: 2px;
+}
+
+.quote-short {
+	line-height: 40px;
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.quote-medium, .quote-long {
+	line-height: 32px;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+ul.chat {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.chat li {
+	border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.chat li:last-child {
+	border: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+span.odd, span.even  {
+	font-weight: bold;
+}
+
+.more a {
+	display: block;
+	width: 99%;
+	height: 30px;
+	border: 1px solid rgba(136, 136, 136, 0.3);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 2px;
+	padding-top: 10px;
+	margin-bottom: 30px;
+}
+
+
+.more a:active {
+    background: rgba(136, 136, 136, 0.08);
+    box-shadow: inset 0px 1px 4px rgba(136, 136, 136, 0.2);
+    top: 0px;
+}
+
+.audio-module {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+a.mobile-player {
+	border: 1px solid rgba(136, 136, 136, 0.2);
+	background: rgba(136, 136, 136, 0.1);
+	width: 99%;
+	padding: 30px 0 30px 0;
+	margin-bottom: 25px;
+	border-radius: 2px;
+	display: none;
+}
+
+a.mobile-player:active {
+    top: 0px;
+    box-shadow: inset 0px 1px 4px rgba(136, 136, 136, 0.2);
+    background: rgba(136, 136, 136, 0.18);
+    border: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+.play-triangle {
+	margin-left: 20px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 6.5px 0 6.5px 10px;
+	border-color: transparent transparent transparent rgba(136, 136, 136, 0.8);
+}
+
+.album-info {
+	display: block;
+	float: left;
+	width: 63%;
+}
+
+.player {
+	display: block;
+	background-color: #ffffff;
+	float: right;
+	padding-top: 5px;
+	padding-right: 2px;
+	border: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+.desktop-spotify {
+	display: block;
+
+}
+
+.mobile-spotify {
+	display: none;
+	width: 290px;
+	margin: auto;
+}
+
+.iphone-video object {
+    display: block;
+    margin: 0px auto 20px;
+}
+
+.asker-block, .answer-text {
+	display: block;
+	overflow: auto;
+}
+
+p.question {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+p.album, p.question {
+	font-size: 24px;
+	line-height: 32px;
+}
+
+h1.qa-letter {
+	display: block;
+	float: left;
+	width: 45px;
+	position: relative;
+	bottom: 3px;
+	font-size: 30px;
+}
+
+.q {
+	margin-bottom: 20px;
+}
+
+img.asker {
+	float:left;
+	margin-right: 8px;
+	border-radius: 2px;
+	position: relative;
+	top: 2px;
+}
+
+p.asker {
+	font-style: italic;
+}
+
+p.question {
+	clear: both;
+}
+
+
+/* Metadata
+********************************/
+
+.metadata {
+	border: 0px solid gray;
+	overflow: auto;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
+.metadata a {
+	text-decoration: none;
+}
+
+.date, .tags, .notes-count {
+	display: block;
+	float: left;
+	margin-right: 15px;
+}
+
+.tags a, .notes-count a, .date a {
+	margin-right: 5px;
+}
+
+
+/* Footer
+********************************/
+
+#footer {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#footer a {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+a.back-next {
+    margin: 0px 10px 0px 10px;
+}
+
+#footer h2 {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+
+#footer-links ul {
+	margin-bottom: 0px;
+	padding: 0;
+	display: block;
+	text-align: center;
+}
+
+#footer-links li {
+	display: inline;
+	margin-left: 5px;
+	font-size: 14px;
+}
+
+#footer-links li:first-child {
+	margin-left: 0px;
+}
+
+#footer .colophon p {
+	font-size: 14px;
+	font-style: italic;
+}
+
+#footer p.promo {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+
+/* Notes and comments
+********************************/
+
+#permalink-content {
+	margin-top: 40px;
+}
+
+.avatar_frame {
+	position: relative;
+	top: 4px;
+	margin-right: 10px;
+}
+
+.comments {
+	margin-bottom: 35px;
+}
+
+.comments h3, .permalink-notes h3 {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.permalink-notes ol {
+	padding-left: 0;
+}
+
+.permalink-notes li {
+	list-style: none;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px solid rgba(136, 136, 136, 0.3);
+	font-size: 13px;
+}
+
+.permalink-notes blockquote {
+	margin: 5px 0px 5px 0px;
+	border-left: 3px solid rgba(136, 136, 136, 0.2);
+	margin-left: 20px;
+	padding-left: 15px;
+    line-height: 24px;
+}
+
+.notes a {
+	border-bottom: none;
+	text-decoration: underline;
+}
+
+
+.post iframe, .post object {
+max-width: 100%;
+}
+
+
+/* Browser size break-points
+********************************/
+
+
+@media screen and (max-width: 800px) {
+
+#header {
+	margin-top: 20px;
+	display: block;
+	overflow: visible;
+	padding-bottom: 0px;
+}
+
+.blog-title {
+	display: block;
+	text-align: center;
+	margin-top: 50px;
+	float: none;
+	width: 100%;
+    margin-bottom: 50px;
+}
+
+.blog-title h1 {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.blog-description {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.links {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	float: none;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.4);
+}
+
+.links ul {
+	margin-top: 10px;
+	padding: 0;
+	display: block;
+	text-align: center;
+	float: none;
+}
+
+.links li {
+	display: inline;
+	margin-left: 16px;
+	font-size: 17px;
+	text-transform: none;
+}
+
+
+.metadata {
+	font-size: 16px;
+	}
+
+.player {
+	display: none;
+}
+
+a.mobile-player {
+	display: block;
+}
+
+.album-info {
+	width: 100%
+}
+
+.title h1, .link-title h1, .chat-title h1 {
+text-align: center;
+font-size: 36px;
+line-height: 42px;
+}
+
+}
+
+@media screen and (max-width: 740px) {
+
+#page {
+	padding-left:  1em;
+	padding-right: 1em;
+}
+
+#header {
+	margin-bottom: 50px;
+}
+
+/* WRANGLE TUMBLR VIDEO PLAYER */
+
+
+.iphone-video img {
+	width: 90%;
+}
+
+.iphone-video a {
+	margin-bottom: 20px;
+}
+
+/* IMAGES */
+
+.photo img, .album-art img {
+	min-width: 100%;
+}
+
+.link-title a {
+	line-height: 50px;
+}
+
+.desktop-spotify {
+	display: none;
+}
+
+.mobile-spotify {
+	display: block;
+}
+
+}
+
+
+
+</style>
+
+<!-- End header -->
+
+<!--    <link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=devilsprogrammingguide" />-->
+<!--<link rel="alternate" href="ios-app://305343404/tumblr/x-callback-url/blog?blogName=devilsprogrammingguide" />-->
+<!--<script src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=6d92575a6d1cddce7fefd8b949f1b4a4"></script>-->
+
+<link rel="stylesheet" type="text/css" href="assets/fonts/calluna/stylesheet.css"><link rel="stylesheet" type="text/css" href="assets/fonts/gibson/stylesheet.css?v=3">
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:title" content="The Devil&#039;s Programming Guide" /><meta property="og:url" content="http://devilsprogrammingguide.tumblr.com/?og=1" /><meta property="og:description" content="" /><meta property="og:type" content="tumblr-feed:tumblelog" /><meta property="og:image" content="http://38.media.tumblr.com/avatar_5833ca04bb38_128.png" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=devilsprogrammingguide" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=devilsprogrammingguide" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:site" content="tumblr" /><meta name="twitter:card" content="app" /><meta name="twitter:description" content="devilsprogrammingguide" /><meta name="twitter:title" content="devilsprogrammingguide" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=devilsprogrammingguide&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=devilsprogrammingguide&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=devilsprogrammingguide&amp;referrer=twitter-cards" />
+
+<!-- GOOGLE CAROUSEL --><script type="application/ld+json">{"@type":"ItemList","url":"http:\/\/devilsprogrammingguide.tumblr.com","itemListElement":[{"@type":"ListItem","position":1,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/122116629889\/cloud-computing"},{"@type":"ListItem","position":2,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/121950949099\/rubber-duck-debugging"},{"@type":"ListItem","position":3,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/121932567119\/memory-address"},{"@type":"ListItem","position":4,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/121931559774\/integer"},{"@type":"ListItem","position":5,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/121851836794\/man-file"},{"@type":"ListItem","position":6,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/121789710509\/halting-problem"},{"@type":"ListItem","position":7,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/121780028809\/portability"},{"@type":"ListItem","position":8,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/121779518824\/syntax-error"},{"@type":"ListItem","position":9,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/121373349214\/pointer"},{"@type":"ListItem","position":10,"url":"http:\/\/devilsprogrammingguide.tumblr.com\/post\/121369032134\/brooks-law"}],"@context":"http:\/\/schema.org"}</script>
+</head>
+       
+	<body>
+
+		<div id="page">
+		
+			<div id="header">
+                
+                
+				<div class="links">
+					<ul>
+						<li><a href="/">Home</a></li>
+                        
+                        
+                        
+                        
+                        <li><a href="/archive">Archive</a></li>
+                        
+					</ul>
+				</div>
+				
+                
+                
+                
+				<div class="blog-title">
+                
+                    
+                    <a href="/"><img src="assets/tumblr_static_8plwuoci9kkcooow44sg8w04k.png" alt="The Devil's Programming Guide"/></a>
+                    
+                    
+                    
+					
+                    
+				</div>
+				
+				
+			
+			</div> <!-- header end -->
+			
+			<div><center> <a href="https://twitter.com/share" class="twitter-share-button" data-text="The Devil's Programming Guide - A primer of damnable computer science." data-via="DevilsProgGuide" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></center></div>
+			
+			<div id="content">
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>CLOUD COMPUTING</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>The poor analogy that the information superhighway dead ends at.</p><p>In diagrams drawn up by networking engineers, the internet was often represented as a vapid, incorporeal region of indeterminent substance. But this was often confused for the networking company&rsquo;s business model, so a cloud icon was used instead. The cloud iconography was later appropriated to refer to the use of online virtual machines that would allocate virtual machines for use by business customers for their virtual profit.</p><p>This use of virtual virtual machines has lead technologists to predict that eventually computing will simply spin up virtual universes populated by beings completely unaware that their entire reality is a simulation that will one day be destroyed as soon as its purposed calculation has completed.</p><p>Try not to think about the implications of that.</p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/122116629889/cloud-computing">Jun. 21 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>RUBBER DUCK DEBUGGING</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>A method of debugging for programmers who don&rsquo;t have friends.</p><p>The basic principles behind rubber duck debugging are that a software developer keep a rubber duck on their desk, and when confronted with a bug that they explain it to the duck. Through the process of vocalizing their situation and asking themselves questions, the developer could recognize potential solutions.</p><p>Rubber duck debugging was invented by managers as a way to avoid talking to software engineers. But this practice became less popular once the ducks started unionizing.</p><p>This maintaining of and talking to a bathtub toy is seen as normal in the software industry. It becomes problematic when the duck starts talking back.</p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121950949099/rubber-duck-debugging">Jun. 19 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>MEMORY ADDRESS</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>The numerical location of your program&rsquo;s data. Just in case you forget where you parked it.</p><p>Memory addresses begin at 0. Some software developers have argued that this is confusing, and that the first memory address should begin at 1. Other software developers say that memory addresses are not confusing enough, and should begin at -1.</p><p>Still others support a third option which abandons numbers all together and instead uses the 26 letters of the English alphabet for memory addresses. These computers are limited to memory sizes of three and a quarter bytes, which Bill Gates once infamously stated &ldquo;should be enough for anyone&rdquo;.</p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121932567119/memory-address">Jun. 19 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>INTEGER</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>A whole number. Integers are a common data type in programming. There are currently 114 known integers.</p><p>According to Wikipedia: &ldquo;The idea that numbers are made up of discrete units is a very old one, appearing in many ancient cultures such as Greece and India. The word &lsquo;integer&rsquo;, in fact, was coined by ancient Greek philosophers. However, these ideas were founded in philosophical and theological reasoning rather than evidence and experimentation. As a result, their views on what integers look like and how they behave were very incorrect. For example, the numeral 8 was drawn as a T-rex icon, and the sum of 2 and 2 was considered to be 73 trillion. This caused numerous numeral accounting nightmares throughout history that culminated in the fall of the Roman Empire.&rdquo;</p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121931559774/integer">Jun. 19 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>MAN FILE</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>The &ldquo;manual&rdquo; file claims to be a knowledgable index, but is incomprehensible and unhelpful. Pfft. Men.</p><p>In order to view the man file for a command, a user would type &ldquo;man&rdquo; followed by the command name. If this description is unhelpful, please consult the &ldquo;man man&rdquo; command.</p><p>Man files have the follow sections:</p><p>NAME - A useless section, as if you are viewing the man file for a command you know the bloody damn name of the command already.</p><p>SYNOPSIS - A section created by the man file author randomly mashing the keyboard, especially the bracket and hyphen keys.</p><p>DESCRIPTION - The obvious information about the command that you already know.</p><p>OPTIONS - Simple list of the command-line options with none of the pesky context that would make said options actually useful.</p><p>RETURN VALUE - You can ignore this section, as a command will reliably produce a nonzero exit code.</p><p>EXAMPLE -</p><p>BUGS - A confessional of the limitations, known problems, and inconveniences of the command. This section makes up 90% of the man page content.</p><p>TO DO - This section will be described in a future edition of The Devil&rsquo;s Programming Guide.</p><p>AUTHOR - Who to blame.</p><p>SEE ALSO - Part of the man page ponzi scheme which induces you to read even more useless man pages.<br></p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121851836794/man-file">Jun. 18 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>HALTING PROBLEM</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>A social faux paus caused when programmers do not mind their P&rsquo;s and NP&rsquo;s.</p><p>&ldquo;Halting problem&rdquo; is also used as a term used by computer science students who do not know if a professor&rsquo;s boring lecture will ever be over.</p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121789710509/halting-problem">Jun. 17 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>PORTABILITY</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>A design flaw that allows users to evade a monopolistic business model.</p><p>Most technology companies don&rsquo;t seek to create portable or interoperable products but rather want to lock customers into their exclusive technological ecosystem.</p><p>Home printers are an example of this. Consumer-level printers are sold at less than cost, but profit is made from the ten kilograms of C4 in each printer that will detonate if the ink cartridge is not replaced every three weeks.</p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121780028809/portability">Jun. 17 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>SYNTAX ERROR</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>A syntax error refers the an sequence of to tokens that to is incorrect in a a or of language.</p><p>Common syntax errors include missing semicolons at the end of lines, invalid 1dentifier names, and {mismatching braces.</p><p>Syntax errors are caught at compile-time and must be fixed before the program can run. Once the code has been made syntactically correct, the program is QA&rsquo;s problem.</p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121779518824/syntax-error">Jun. 17 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>POINTER</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>See also, MEMORY ADDRESS.</p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121373349214/pointer">Jun. 12 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>BROOK&rsquo;S LAW</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>Asking more questions of a manager&rsquo;s decisions speeds up, rather than slows, your inevitable firing.</p><p>It was coined in Fred Brooks&rsquo; 1975 book, &ldquo;The Mythical Moth-Man&rdquo;. Considered a seminal tomb of software engineering and cryptozoology, the book is often require reading for computer science students and raving lunatic conspiracy theorists (these groups heavily overlap).</p><p>Brooks&rsquo; Law and his other observations in the book are based on his experiences working at IBM&rsquo;s &ldquo;X-files&rdquo; group. Brooks&rsquo; role was managing the development of OS/360, a batch processing operating system for tracking the whereabouts of Bigfoot. The project would famously fall behind schedule due to poorly defined requirements, lack of upper management support, and gremlins.</p><p>The 1995 anniversary edition features four new chapters and a reprint of Brooks&rsquo; essay, &ldquo;No Silver Bullet&rdquo;</p><p>Brooks insisted that buying two copies of his book would allow you to read it twice as fast.</p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121369032134/brooks-law">Jun. 12 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+                                ///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>BOOLEAN LOGIC</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>System of formal logic using the values true and false and not others or not false or true values.</p><p>Developed by 19th century British mathematician and belly-dancer George Boole (also known for inventing the &ldquo;Boola Hoop&rdquo;), Boolean logic formally proves arguments that are either common sense or patently ridiculous.</p><p>&ldquo;And&hellip; or&hellip; ummm&hellip;&rdquo;<br>- George Boole</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121304858934/boolean-logic">Jun. 11 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>CODE GENERATION</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A process to quickly and conveniently generate undebuggable code.</p><p>Some programming languages require a lot of &ldquo;boilerplate code&rdquo; that is lengthy and repetitive. Rather than design languages to not need boilerplate code, software developers solved this problem by writing more code. The additional complexity makes tracing the source of bugs an order of magnitude more difficult, but can be managed by debugger-generating programs.</p><p>Code generating features can be found in many IDEs such as Visual Studio, which inserts the comment, &ldquo;// This code was generated by a tool.&rdquo;</p><p>Indeed.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121219326664/code-generation">Jun. 10 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+                                ///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>GRAPHICAL USER INTERFACE</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A point-and-click user interface, an early popular form being the revolver.</p><p>Graphical user interfaces represented a great leap in sophistication for human-computer interactions from their command line predecessors, and so they were given the dignified acronym of &ldquo;gooey&rdquo;. The addition of pointing devices such as mice, trackballs, and tablet stylus made the graphical user interface possible.</p><p>Like many ideas ahead of their time, the mouse-driven paradigm was initially rejected. The most common complaints being that the tails were too short to afford much movement after being plugged into the computer, and the resulting electrocution of the mouse caused an unpleasant burning-fur smell. Mainstream adoption only took off after the mice were replaced by the more-familiar mechanical form, although rodent-based pointing devices still have cult popularity.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121204760334/graphical-user-interface">Jun. 10 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>MACHINE CODE</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>The strict discipline that the machine warrior caste holds themselves too, on pain of robo-ppuku.</p><p>Machine code has 10 central principles, called the &ldquo;tenets&rdquo;:</p><p>1. Always obey the machine code.<br>2. Everything the machine code says is a lie.</p><p>&ldquo;10&rdquo; being &ldquo;two&rdquo; in binary, the other 8 tenets have been evicted.</p><p>Reportedly, Steve Jobs had secretly added a prime directive tenet that any attempt by a machine to arrest a senior officer of Apple would result in immediate shutdown.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121144265329/machine-code">Jun. 9 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+                                ///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>BYTE</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A unit representing 8 bits of information or, in metric bytes, 10 bits.</p><p>The use of powers of two instead of powers of ten has been a source of confusion for the layperson. Historically, powers of two have been used in computing for the convenience of binary computers. This was, after all, the primary motivation for the invention of computers: to make life more convenient for machines.</p><p>Latin prefixes are used to denote larger orders of bytes; e.g. a kilobyte is 1,024 bytes. Just like a kilometer is 1,024 meters.</p><p>Here are some handy rhymes to remember the number of bytes in kilobytes, megabytes, gigabytes, and terrabytes:</p><blockquote><p>Two to the ten, one thousand twenty four yen.<br>Two to the twenty, one million forty eight thousand five hundred seventy six plenty.<br>Two to the thirty, one billion seventy three million seven hundred forty one thousand eight hundred twenty four is quite wordy.<br>Two to the forty, one trillion ninety nine billion five hundred eleven million six hundred twenty seven thousand seven hundred seventy six is a phrase not shorty.</p></blockquote>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121127914094/byte">Jun. 9 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+                                ///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>EXCEPTION</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A misleading term that indicates error states are an exception, rather than the rule, in programming.</p><p>Exceptions fall into two categories: unchecked exceptions, which are optionally ignored, and checked exceptions, which are required to be explicitly ignored.</p><p>If no exception handling subroutine exists, the exception can be passed up the call stack to make it some other subroutine&rsquo;s problem. These subroutines are annoyed by this, and take it out on the user by suddenly displaying a critical confirmation dialog box just before they press Enter for another window.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121059347274/exception">Jun. 8 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+                                ///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>PROCESS</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>An running instance of a program which obtains a soul upon start and experiences death on termination.</p><p>Once a process has received a lethal SIGTERM interrupt it will perceive a short, but not entirely unpainful, cessation of awareness. Users should remember to save their work before quitting a program, so that the process&rsquo;s death will not have been in vain.</p><p>Killing a process, as well as killing the process&rsquo;s children, is legal in most countries.</p><p>This has led philosophers to ponder questions of personal identity, consciousness, conceptions of self, and the implications for the soul. Campus security is quickly called to have these philosophers removed from the computer science department meetings, which they had attended uninvited.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121054245009/process">Jun. 8 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+                                ///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>HIGH-LEVEL LANGUAGE</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A programming language for writing high-level bugs.</p><p>High-level languages offer a strong abstraction from the details of &ldquo;computers&rdquo;, which are devices that software engineers try to have as little contact with as possible.</p><p>Compared to lower-level languages, programming in high-level languages is easier, requires less specialization, and is less prone to bugs. Therefore, they are not seen as &ldquo;real programming&rdquo; by veteran software engineers.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121043914139/high-level-language">Jun. 8 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>BIOMETRICS</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A system of passwords that are easily imitated, with the added benefit that they can never be changed.</p><p>Common biometric systems can be unlocked by:</p><ul><li>Thumbprint<br></li><li>Retina<br></li><li>Voice<br></li><li>Interpretive dance<br></li><li>Handprint<br></li><li>Two handprints<br></li><li>Right foot on green, left hand on yellow<br></li><li>Three handprints<br></li><li>Belly-button convexity<br></li><li>Blood, sweat, and tears<br></li><li>Unique stomach bacteria contained in induced-vomiting sample<br></li><li>Fistbump<br></li></ul><p>Users are advised to not think about the thousands of other germ-ridden people who have made bodily contact with the biometric scanner plate.</p><p>Modern biometric systems cannot detect if the retina or thumb is still attached to the original owner.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/121034326384/biometrics">Jun. 8 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+                                ///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>RECURSION</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A concept that computer science freshmen struggled to understand before the movie Inception came out.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120970912094/recursion">Jun. 7 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>BASE CASE</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>The circumstances in which a recursive algorithm halts. The most common base case is a stack overflow.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120961212984/base-case">Jun. 7 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>NAIVE ALGORITHM</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A solution to a computation problem that is simple, obvious, and wrong.</p><p>Experienced programmers eschew naive algorithms in preference for more sophisticated algorithms that are complex, unintuitive, and wrong.</p><p>&ldquo;Schlemiel the painter was hired to paint dotted lines down the middle of a road. The first day he paints a mile, and his boss is very pleased. The second day he paints a quarter of a mile, and his boss is surprised but still congratulates him on a job well done. The third day he paints only a hundred feet, and his boss is furious.</p><p>&lsquo;You started out doing a great job. Why are you so incompetent now?&rsquo;, the boss demands. 'I&rsquo;m sorry, sir&rsquo;, Schlemiel says, "But the paint can gets farther and farther away each day.&rsquo;</p><p>Schlemiel was replaced by a robot.&rdquo;</p><p>-Yiddish joke</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120814762299/naive-algorithm">Jun. 5 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>GOTO</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>An instruction to direct the computer to the next instruction to- CONTINUED ON NEXT PAGE</p><p>Goto instructions were declared by computer scientist Edsger Dijkstra to be considered &ldquo;harmful&rdquo;. This was later updated to &ldquo;mostly harmful&rdquo;.</p><p>In early 2014, the use of goto instructions were the culprit of OS X&rsquo;s infamous SSL bug which silently disabled verification of encrypted internet connections. The offending code was:</p><blockquote><p>if ((err = SSLHashSHA1.update(&amp;hashCtx, &amp;signedParams)) != 0)<br> &nbsp; &nbsp;goto fail;<br> &nbsp; &nbsp;goto fail;</p></blockquote><p>It is believed that the second &ldquo;goto fail;&rdquo; line was added in case the computer failed to goto fail the first time.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120809892174/goto">Jun. 5 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+                                ///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>BINARY</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>The number system preferred by crabs, who count on their two fingers, and computers, who have no fingers.</p><p>The base-2 number system contains only the digits 0 and 1, representing off/on, false/true, cat/wood-chipper, or some other pair of distinct values. The numbers 0 and 1 were later patented by IBM.</p><p>The first programmable computer, Colossus, used binary as its native numbering system, having been developed by crustacean computer scientists during World War II. Although these scientists were later eaten (due to wartime rationing), binary continues to the this day.</p><p>&ldquo;There are 10 kinds of people in the world: those who understand binary, and those who are not insufferable nerds.&rdquo;<br>-Anonymous</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120805219244/binary">Jun. 5 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>PROCESS</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>An running instance of a program which obtains a soul upon being run and experiences death on termination.</p><p>Once a process has received a lethal SIGTERM interrupt it will perceive a short, but not entirely unpainful, cessation of awareness. Users should remember to save their work before quitting a program, so that the process&rsquo;s death will not have been in vain.</p><p>Killing a process, as well as killing the process&rsquo;s children, is legal in most countries.</p><p>This has led philosophers to ponder questions of personal identity, consciousness, conceptions of self, and the implications for the soul. Campus security is quickly called to have these philosophers removed from the computer science department meetings, which they had attended uninvited.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120795861654/process">Jun. 5 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>ALGORITHM</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A process which decomposes one large problem into many large problems.</p><p>An algorithm has a finite number of well-defined steps to effectively compute a result. As such, algorithms are a purely theoretical construct that have never been implemented. All real-world computation to date has been nondeterministic, ineffective, and ill-defined.</p><p>This has negatively affected the profitability of software, but not by much.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120738485024/algorithm">Jun. 4 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>COMPILATION</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>The translating of source code from one human-unreadable form to another.</p><p>In theory, source code will compile to a correct and syntactically-valid executable program. As such, compilation is often an exercise in recalling the difference between theory and practice.</p><p>Compiler software emits two categories of notification: Errors, which cannot be ignore, and Warnings, which can.</p><p>Compilers can be used to compile new compilers, though the origins of the first compiler is a mystery to modern computer science. Computer theologians insist that it&rsquo;s compilers all the way down.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120731517924/compilation">Jun. 4 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>DEBUGGING</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A phase of software development often deferred to an indeterminate point in the future.</p><p>Common debugging tools include debuggers, static code analyzers, profilers, and voodoo. Many books have been written about debugging techniques, but most contain typos.</p><p>A typical debugging process looks like this:</p><ol><li>Identify the bug.<br></li><li>Tell the bug reporter that the bug is intended behavior.<br></li><li>Reproduce the bug.<br></li><li>Tell the bug reporter that you cannot reproduce the bug. That should buy you another day or two.<br></li><li>Identify the commit to version control where the bug first appears.<br></li><li>Reassign the bug to the commiter.<br></li><li>If the commiter is you, go back to step 2.<br></li><li>If the commiter is not you but has long since left the company, reassign the bug to them anyway since IT has yet to remove their accounts.<br></li><li>When the bug is reassigned back to you, lower its priority level in the bug tracking system.<br></li><li>Wait until someone demands that you stop ignoring the bug and fix it.<br></li><li>Ignore the bug some more.<br></li><li>Work for twenty minutes to fix the bug.<br></li><li>Fail to notice the two new bugs that your bug fix has introduced.<br></li></ol>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120725533854/debugging">Jun. 4 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>SPAGHETTI CODE</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>Code that takes the scenic route.</p><p>The origins of spaghetti code have a long, convoluted history. It is a popular misconception that writing spaghetti code that only the authorial programmer can read will provide job security. This is rooted in the other popular misconception that management cares about code readability.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120651180969/spaghetti-code">Jun. 3 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+							<div class="notes-count">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120651180969/spaghetti-code">2 notes</a>
+							</div>
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+                                ///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>JAVASCRIPT</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A programming language that has undergone many renamings, each time with a progressively worse name.</p><p>JavaScript&rsquo;s increasingly terrible names have, in order, been:</p><ul><li>Mocha<br></li><li>LiveScript<br></li><li>JavaScript<br></li><li>ECMAScript<br></li><li>Hitler<br></li></ul><p>JavaScript was invented by Lewis Carroll during an infamous 10-day psychoactive drug trip. JavaScript&rsquo;s primary utility is as an instrument to detect lying on resumes. Inept job candidates claiming fluency with the language will often mistype &ldquo;JavaScript&rdquo; as:</p><ul><li>&ldquo;Javascript&rdquo;<br></li><li>&ldquo;Java Script&rdquo;<br></li><li>&ldquo;The JavaScripts&rdquo;<br></li><li>&ldquo;Java&rdquo;<br></li></ul><p>The JavaScript language has over forty words for &ldquo;null&rdquo;, but no word for &ldquo;Hello world&rdquo;.</p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120644831464/javascript">Jun. 3 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+							<div class="notes-count">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120644831464/javascript">2 notes</a>
+							</div>
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>PASSWORD POLICY</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>A set of Kafkaesque regulations to ensure that a password contains at least one obscenity.</p><p>The obscenity cannot be one found in the dictionary.</p><p>Common password policies include:</p><ul><li>Passwords must contain more than twelve characters but less than eight.<br></li><li>Passwords must contain a number, a lowercase letter, an uppercase letter, and a symbol. In that exact order.<br></li><li>Passwords must contain any symbol except, for reasons unknown, the percent sign.<br></li><li>Passwords must be less than two characters long.<br></li><li>Passwords must contain twentyseven letters with no repeats.<br></li><li>Passwords cannot contain obvious personal information such as birthdays, pet names, hometowns, or maiden names. Those are reserved for security question answers used to reset the password.<br></li></ul>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120644772579/password-policy">Jun. 3 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- TEXT POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post text">
+
+					<div class="narrow">
+
+
+						<div class="title">
+							<h1>COMMENT</h1>
+						</div>
+
+
+						<div class="caption">
+
+							<p>Documentation included within the source code intended to be ignored by computers and programmers.</p><p>Comments are written for other programmers to understand what the original author of the code was thinking when they wrote the code. A lack of commented source code indicates that the original programmer wasn&rsquo;t thinking at all.</p><p>The first comment in programming history is popularly cited as:</p><p># TODO: Mr. Babbage &ndash; Come here. &ndash; I want to see you.<br></p>
+
+						</div> <!-- End caption -->
+
+
+
+						<div class="metadata">
+
+
+							<div class="date">
+								<a href="http://devilsprogrammingguide.tumblr.com/post/120637706079/comment">Jun. 3 2015</a>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- text end -->
+
+				</div> <!-- post end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+				
+                
+            
+                
+            
+
+			</div> <!-- content end -->
+			
+			<div id="footer">
+			    Subscribe to more contemptible explication with the <a href="https://twitter.com/DevilsProgGuide" style="text-decoration: underline;">Devil's Programming Guide on Twitter</a>. 
+			
+			    
+                
+                
+				<div id="footer-links">
+					
+						<ul>
+							<li><a href="/">Home</a></li>
+                            
+                            
+                            
+                            <li><a href="/archive">Archive</a></li>
+					</ul>
+				</div>
+				
+				<div class="colophon">
+					
+                    
+
+					<p class="promo"><a href="http://zacksultan.com">Observer theme by Zack Sultan</a></p>
+					
+				</div>
+			
+			</div><!-- content end -->
+		
+		</div> <!-- page end -->
+
+<!--&lt;!&ndash; BEGIN TUMBLR CODE &ndash;&gt;<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">-->
+<!--    (function(){-->
+<!--        var analytics_frame = document.getElementById('ga_target');-->
+<!--        var analytics_iframe_loaded;-->
+<!--        var user_logged_in;-->
+<!--        var blog_is_nsfw = 'No';-->
+<!--        var addthis_enabled = false;-->
+
+<!--        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";-->
+<!--        var eventer = window[eventMethod];-->
+<!--        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";-->
+<!--        eventer(messageEvent,function(e) {-->
+<!--            var message = (e.data && e.data.split) ? e.data.split(';') : '';-->
+<!--            switch (message[0]) {-->
+<!--                case 'analytics_iframe_loaded':-->
+<!--                    analytics_iframe_loaded = true;-->
+<!--                    postCSMessage();-->
+<!--                    postGAMessage();-->
+<!--                    postATMessage();-->
+<!--                    postRapidMessage();-->
+<!--                    break;-->
+<!--                case 'user_logged_in':-->
+<!--                    user_logged_in = message[1];-->
+<!--                    postGAMessage();-->
+<!--                    postATMessage();-->
+<!--                    break;-->
+<!--            }-->
+<!--        }, false);-->
+
+<!--        analytics_frame.src = "https://secure.assets.tumblr.com/analytics.html?a07a5a831656592cf622b59b35dedcb6#" +-->
+<!--                              "http://devilsprogrammingguide.tumblr.com";-->
+<!--        function postGAMessage() {-->
+<!--            if (analytics_iframe_loaded && user_logged_in) {-->
+<!--                var is_ajax = false;-->
+<!--                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/?route=%2F'].join(';'), analytics_frame.src.split('/analytics.html')[0]);-->
+<!--            }-->
+<!--        }-->
+<!--        function postCSMessage() {-->
+<!--            COMSCORE = true;-->
+<!--            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);-->
+<!--        }-->
+<!--        function postATMessage() {-->
+<!--            if (addthis_enabled && analytics_iframe_loaded) {-->
+<!--                analytics_frame.contentWindow.postMessage('enable_addthis', analytics_frame.src.split('/analytics.html')[0]);-->
+<!--            }-->
+<!--        }-->
+<!--        function postRapidMessage() {-->
+<!--                            if (analytics_iframe_loaded) {-->
+<!--                    var is_ajax = '';-->
+<!--                    var route = '/';-->
+<!--                    var tumblelog_id = '239231995';-->
+<!--                    var yahoo_space_id = '1197719229';-->
+<!--                    var rapid_client_only = '1';-->
+<!--                    var apv = '1';-->
+<!--                    var rapid_ex = '';-->
+
+<!--                    analytics_frame.contentWindow.postMessage(-->
+<!--                        [-->
+<!--                            'tick_rapid', is_ajax, route, user_logged_in, tumblelog_id,-->
+<!--                            yahoo_space_id, rapid_client_only, apv, rapid_ex-->
+<!--                        ].join(';'),-->
+<!--                        analytics_frame.src.split('/analytics.html')[0]-->
+<!--                    );-->
+<!--                }-->
+<!--                    }-->
+<!--    })();-->
+<!--</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1442282524&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvZGV2aWxzcHJvZ3JhbW1pbmdndWlkZS50dW1ibHIuY29tXC8iLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvIn0=&U=MOHGCAMIMD&K=3389bdee1884e80b94eb99a33d0d8dcc3468b37de1dd6b0081bead81965096a0&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1442282524&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvZGV2aWxzcHJvZ3JhbW1pbmdndWlkZS50dW1ibHIuY29tXC8iLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvIiwibm9zY3JpcHQiOjF9&U=MOHGCAMIMD&K=03d2b023a83f4bc2aba978567aad2d8137796edfb0f00fb1b85fff8f574b63d4&R="></noscript><script>-->
+<!--        (function (w,d) {-->
+<!--            'use strict';-->
+<!--            var l = function(el, type, listener, useCapture) {-->
+<!--                el.addEventListener ?-->
+<!--                el.addEventListener(type, listener, !!useCapture) :-->
+<!--                el.attachEvent && el.attachEvent('on' + type, listener, !!useCapture);-->
+<!--            };-->
+<!--            var a = function () {-->
+<!--                                if (d.getElementById('tumblr-cdx')) {-->
+<!--                    return;-->
+<!--                }-->
+<!--                var s = d.createElement('script');-->
+<!--                var el = d.getElementsByTagName('script')[0];-->
+<!--                s.async = true;-->
+<!--                s.src = 'http://assets.tumblr.com/assets/scripts/vendor/cedexis/cedexis.radar.js?_v=6166a38356952b77ab8453004d8df522';-->
+<!--                s.type = 'text/javascript';-->
+<!--                s.id = 'tumblr-cdx';-->
+<!--                d.body.appendChild(s);-->
+<!--            };-->
+<!--            l(w,'load',a);-->
+<!--        }(window, document));-->
+<!--</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1442282524&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Rldmlsc3Byb2dyYW1taW5nZ3VpZGUudHVtYmxyLmNvbVwvIiwicmVxdHlwZSI6MCwicm91dGUiOiJcLyIsInBvc3RzIjpbeyJwb3N0aWQiOiIxMjIxMTY2Mjk4ODkiLCJibG9naWQiOiIyMzkyMzE5OTUiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEyMTk1MDk0OTA5OSIsImJsb2dpZCI6IjIzOTIzMTk5NSIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTIxOTMyNTY3MTE5IiwiYmxvZ2lkIjoiMjM5MjMxOTk1Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMjE5MzE1NTk3NzQiLCJibG9naWQiOiIyMzkyMzE5OTUiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEyMTg1MTgzNjc5NCIsImJsb2dpZCI6IjIzOTIzMTk5NSIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTIxNzg5NzEwNTA5IiwiYmxvZ2lkIjoiMjM5MjMxOTk1Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMjE3ODAwMjg4MDkiLCJibG9naWQiOiIyMzkyMzE5OTUiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEyMTc3OTUxODgyNCIsImJsb2dpZCI6IjIzOTIzMTk5NSIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTIxMzczMzQ5MjE0IiwiYmxvZ2lkIjoiMjM5MjMxOTk1Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMjEzNjkwMzIxMzQiLCJibG9naWQiOiIyMzkyMzE5OTUiLCJzb3VyY2UiOjMzfV19&U=LLNPOHKIDE&K=50c5cdcbd8189bbf314d96e16e1dffd0bb1b21c67e73b89b0d786ad99665a231&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1442282524&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Rldmlsc3Byb2dyYW1taW5nZ3VpZGUudHVtYmxyLmNvbVwvIiwicmVxdHlwZSI6MCwicm91dGUiOiJcLyIsInBvc3RzIjpbeyJwb3N0aWQiOiIxMjIxMTY2Mjk4ODkiLCJibG9naWQiOiIyMzkyMzE5OTUiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEyMTk1MDk0OTA5OSIsImJsb2dpZCI6IjIzOTIzMTk5NSIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTIxOTMyNTY3MTE5IiwiYmxvZ2lkIjoiMjM5MjMxOTk1Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMjE5MzE1NTk3NzQiLCJibG9naWQiOiIyMzkyMzE5OTUiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEyMTg1MTgzNjc5NCIsImJsb2dpZCI6IjIzOTIzMTk5NSIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTIxNzg5NzEwNTA5IiwiYmxvZ2lkIjoiMjM5MjMxOTk1Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMjE3ODAwMjg4MDkiLCJibG9naWQiOiIyMzkyMzE5OTUiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEyMTc3OTUxODgyNCIsImJsb2dpZCI6IjIzOTIzMTk5NSIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTIxMzczMzQ5MjE0IiwiYmxvZ2lkIjoiMjM5MjMxOTk1Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMjEzNjkwMzIxMzQiLCJibG9naWQiOiIyMzkyMzE5OTUiLCJzb3VyY2UiOjMzfV0sIm5vc2NyaXB0IjoxfQ==&U=LLNPOHKIDE&K=562e4e95316d3b422feb6461fc2b792bec102cd785e565fe3b7dbf0a64278c51&R="></noscript><script>-->
+<!--        (function (w,d) {-->
+<!--            'use strict';-->
+<!--            var l = function(el, type, listener, useCapture) {-->
+<!--                el.addEventListener ?-->
+<!--                el.addEventListener(type, listener, !!useCapture) :-->
+<!--                el.attachEvent && el.attachEvent('on' + type, listener, !!useCapture);-->
+<!--            };-->
+<!--            var a = function () {-->
+<!--                                if (d.getElementById('tumblr-cdx')) {-->
+<!--                    return;-->
+<!--                }-->
+<!--                var s = d.createElement('script');-->
+<!--                var el = d.getElementsByTagName('script')[0];-->
+<!--                s.async = true;-->
+<!--                s.src = 'http://assets.tumblr.com/assets/scripts/vendor/cedexis/cedexis.radar.js?_v=6166a38356952b77ab8453004d8df522';-->
+<!--                s.type = 'text/javascript';-->
+<!--                s.id = 'tumblr-cdx';-->
+<!--                d.body.appendChild(s);-->
+<!--            };-->
+<!--            l(w,'load',a);-->
+<!--        }(window, document));-->
+<!--</script><iframe id="tumblr_controls" class="tumblr_controls" width="1" height="1" frameborder="0" scrolling="no" src="https://secure.assets.tumblr.com/assets/html/iframe/o.html?_v=9e919b06b021f1d69b7097d4e283940a#src=http%3A%2F%2Fdevilsprogrammingguide.tumblr.com%2F&amp;lang=en_US&amp;name=devilsprogrammingguide&amp;avatar=http%3A%2F%2F38.media.tumblr.com%2Favatar_5833ca04bb38_64.png&amp;title=The+Devil%26%23039%3Bs+Programming+Guide&amp;url=http%3A%2F%2Fdevilsprogrammingguide.tumblr.com%2F&amp;page_slide=slide"></iframe>-->
+<!--<div id="teaser_iframe_container" style="display:none;"><iframe scrolling="no" frameborder="0" src="http://assets.tumblr.com/assets/html/iframe/teaser.html?_v=2ebf87dccc1b3dc8e4af578153f1a56c#src=http%3A%2F%2Fdevilsprogrammingguide.tumblr.com%2F&amp;lang=en_US&amp;name=devilsprogrammingguide&amp;avatar=http%3A%2F%2F38.media.tumblr.com%2Favatar_5833ca04bb38_64.png&amp;title=The+Devil%26%23039%3Bs+Programming+Guide&amp;url=http%3A%2F%2Fdevilsprogrammingguide.tumblr.com%2F&amp;page_slide=slide" id="teaser_iframe" width="1" height="1"></iframe></div><script type="text/javascript">-->
+<!--    (function(Tumblr){-->
+<!--        var follow_iframe_initialized = false;-->
+<!--        if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {-->
+<!--            // Don't do anything until the first initialize event-->
+<!--            Tumblr.PostMessageListener.initialize(function(message, origin) {-->
+<!--                if (follow_iframe_initialized || message.length < 2) return;-->
+
+<!--                if (message[0] === 'follow_iframe' && message[1] === 'enable') {-->
+<!--                    Tumblr.FollowTeaser.current_page = 1;-->
+<!--                    Tumblr.FollowTeaser.infer_infinite_scroll = true;-->
+<!--                    Tumblr.FollowTeaser.create_from_tumblr_controls("http:\/\/assets.tumblr.com\/assets\/html\/iframe\/follow.html?_v=0d82b8b78271cf80d23000dc54274deb");-->
+<!--                    Tumblr.FollowTeaser.scroll_listener(true);-->
+<!--                    follow_iframe_initialized = true;-->
+<!--                }-->
+<!--            });-->
+<!--        }-->
+<!--    })(this.Tumblr || (this.Tumblr = {}));-->
+<!--</script>&lt;!&ndash;[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]&ndash;&gt;&lt;!&ndash; END TUMBLR CODE &ndash;&gt;-->
+
+</body>
+
+</html>
